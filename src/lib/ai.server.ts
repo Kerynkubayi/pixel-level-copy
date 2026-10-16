@@ -26,7 +26,7 @@ export async function callAI(opts: {
     reasoning: { effort: "low" },
   };
   if (opts.schema) {
-    body.text = { format: { type: "json_schema", name: opts.schema.name, strict: true, schema: opts.schema.schema } };
+    body["text"] = { format: { type: "json_schema", name: opts.schema.name, strict: true, schema: opts.schema.schema } };
   }
 
   const res = await fetch("https://ai.gateway.lovable.dev/v1/responses", {
