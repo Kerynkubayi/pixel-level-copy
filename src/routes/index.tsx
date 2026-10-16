@@ -122,7 +122,7 @@ function Dashboard() {
   );
 }
 
-function Stat({ label, value, tone, children }: { label: string; value: string; tone?: string; children?: React.ReactNode }) {
+function Stat({ label, value, tone, children }: { label: string; value: string; tone?: string | undefined; children?: React.ReactNode }) {
   return (
     <Card className="p-5">
       <p className="text-sm text-muted-foreground">{label}</p>

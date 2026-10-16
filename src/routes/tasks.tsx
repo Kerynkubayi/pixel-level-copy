@@ -209,7 +209,7 @@ function TasksPage() {
   );
 }
 
-function TaskRow({ task: t, reason }: { task: Task; reason?: string }) {
+function TaskRow({ task: t, reason }: { task: Task; reason?: string | undefined }) {
   const [editing, setEditing] = useState(false);
   const [title, setTitle] = useState(t.title);
   const [due, setDue] = useState(t.due ?? "");
